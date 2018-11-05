@@ -93,7 +93,7 @@ I store this in the user-settings folder as
 ### Customization of the Terminus package
 
 In the file
-`USER\Terminus.sublime-settings` I customize the Linux shell of the Windows Subsystem for Linux, which in my case is Ubuntu 18.04. I also set it to be the default shell to start by Terminus:
+`USER\Terminus.sublime-settings` I customize the Linux shell of the Windows Subsystem for Linux, which in my case is Ubuntu 18.04. I also set it to be the default shell to be started by Terminus:
 ```
 {
     // a list of available shells to execute
@@ -145,7 +145,7 @@ In the file
 
 ### Customization of the SendCode package
 
-I make sure Julia code is send to a **Terminus** terminal.
+I make sure Julia code is sent to a **Terminus** terminal.
 
 ```
 {
@@ -186,14 +186,13 @@ In order to be able to open a Julia REPL from a Julia source file currently open
     }
 ]
 ```
-Note that the above assumes that Julia executable, `julia`, is somewhere in the path.
+Note that the above assumes that the Julia executable, `julia`, is somewhere in the path.
 Alternatively, spell out the full path to the executable. I suppose having multiple such commands for different versions of Julia would also make sense.
 
 ### Snippets
 
-The **Julia** mode package comes with predefined snippets (c
-heck out the [github site](https://github.com/JuliaEditorSupport/Julia-sublime)). I have defined some of my own, such as this one 
-to speed up the definition of a doc string (file `docstring.sublime-snippet`):
+The **Julia** mode package comes with predefined snippets (check out the [github site](https://github.com/JuliaEditorSupport/Julia-sublime)). I have defined some of my own, such as this one 
+to speed up the specification of a doc string (file `docstring.sublime-snippet`):
 ```
 <snippet>
     <content><![CDATA[
@@ -213,17 +212,17 @@ The snippets go into one file per snippet, which I put in `USER\snippets`.
 
 ### Open terminal
 
-Bring up the **Command Palette**, start typing in `Terminus`. Select **Terminus: List Shells**, and from the list that appears choose the shell you wish to start. Note that then you can choose whether to start the shell in a panel at the bottom or in a separate view.
+Bring up the **Command Palette**, start typing in `Terminus`. Select **Terminus: List Shells**, and from the list that appears choose the shell you wish to start. Note that then you can select whether to start the shell in a panel at the bottom or in a separate view.
 
 Julia may be started in the resulting terminal in the usual way. The terminals that I have checked out (`cmd` and the WSL Ubuntu shell) work as expected.
 
 ### Open a source file and then run Julia from the source file
 
-Open a Julia source file, and in the **Command Palette**, start typing in `Terminus`. Select **Terminus: Open Julia**. This will open the default terminal on the user's platform (`cmd` on Windows), and run Julia in the directory that holds the open file.
+Open a Julia source file, and in the **Command Palette**, start typing in `Terminus`. Select **Terminus: Open Julia**. This will open the default terminal on the user's platform (`cmd` on Windows), and run Julia in the directory that contains the open file.
 
 ### Evaluating code
 
-Select some Julia code and press `ctrl+enter`. The code should be pasted into the **Terminus** window and evaluated in Julia (assuming Julia was started in that **Terminus** window).
+Select some Julia code and press `ctrl+enter`. The code will be pasted into the **Terminus** window and evaluated in Julia (assuming Julia was started in that **Terminus** window).
 This also works for evaluating a line of code: place the cursor on a line and type `ctrl+enter`.
 
 ### Running Julia files
