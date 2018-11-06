@@ -98,7 +98,7 @@ I put in there my personal preferences for key bindings:
 ```
 The key bindings may seem Baroque, but I use voice recognition which means I say a command, which sends these keys. (The point is to avoid typing these contortions on the keyboard.)
 
-The key bindings for access to the current file name and path are provided by a little plug-in:
+The commands `filename_to_clipboard`, `path_to_clipboard`, for the key bindings that enable access to the current file name and path are provided by a little plug-in:
 ```
 import sublime, sublime_plugin, os
 class FilenameToClipboardCommand(sublime_plugin.TextCommand):
