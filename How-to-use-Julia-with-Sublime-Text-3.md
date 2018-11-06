@@ -28,12 +28,13 @@ Bring up the **Command Palette**, and type in a few letters of **Package Control
 
 Repeat the procedure of package installation from **Package Control** to install the terminal emulation package **Terminus** (https://github.com/randy3k/Terminus), and the package to enable communication between a source window and the terminal, **SendCode** (https://github.com/randy3k/SendCode).
 
-### Install the Zeal package (off-line access the documentation)
+### Install the Zeal package (off-line access to the documentation)
 
+Zeal is an open-source browser of off-line documentation.
 **Package Control** can also be used to install **Zeal for Sublime Text 2/3**.
-Furthermore the executable of Zeal is required, and can be found at
+The executable of Zeal is required, and can be found at
 [https://zealdocs.org/download.html](https://zealdocs.org/download.html).
-Finally, the dock set for Julia needs to be downloaded.
+Finally, the docset for Julia needs to be downloaded within the Zeal documentation browser: start it and under Tools choose Docsets.
 
 ## Customization
 
