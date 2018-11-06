@@ -59,30 +59,44 @@ I put in there my personal preferences for key bindings:
         ]
     },
     // I like to have a key binding for re-indenting of source code
-    { "keys": ["alt+ctrl+shift+r"],  "command": "reindent" },
+    { "keys": ["ctrl+shift+x", "ctrl+r"],  "command": "reindent" },
     // These two key bindings are used to give me access to the name of the current file and its full path.
-    { "keys": ["ctrl+alt+c"], "command": "filename_to_clipboard" },
-    { "keys": ["ctrl+alt+shift+c"], "command": "path_to_clipboard" },
+    { "keys": ["ctrl+shift+x", "ctrl+alt+c"], "command": "filename_to_clipboard" },
+    { "keys": ["ctrl+shift+x", "ctrl+alt+shift+c"], "command": "path_to_clipboard" },
     // To make the copy and paste keys work in the Terminus window 
     // (otherwise they are ctrl+shift+c, ctrl+shift+v)
     { "keys": ["ctrl+c"], "command": "terminus_copy",
-        "context":
-        [
+        "context": [
             { "key": "terminus_view" },
             { "key": "terminus_view.natural_keyboard" },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
         ]
     },
     { "keys": ["ctrl+v"], "command": "terminus_paste",
-        "context":
-        [
+        "context": [
             { "key": "terminus_view" },
             { "key": "terminus_view.natural_keyboard" }
+        ]
+    },
+    // Send code to change the working folder to that holding the current Julia file
+    {
+        "keys": ["ctrl+shift+x", "ctrl+f"], "command": "send_code",
+        "args": {"cmd": "cd(\"$file_path\")"},
+        "context": [
+            { "key": "selector", "operator": "equal", "operand": "source.julia" }
+        ]
+    },
+    // Send code to display help information. Thanks to @mbauman for the suggestion.
+    {
+        "keys": ["ctrl+shift+x", "ctrl+h"], "command": "send_code",
+        "args": {"cmd": "REPL.@repl $selection"},
+        "context": [
+            { "key": "selector", "operator": "equal", "operand": "source.julia" }
         ]
     }
 ]
 ```
-
+The key bindings may seem Baroque, but I use voice recognition which means I say a command, which sends these keys. (The point is to avoid typing these contortions on the keyboard.)
 
 The key bindings for access to the current file name and path are provided by a little plug-in:
 ```
@@ -163,6 +177,14 @@ I make sure Julia code is sent to a **Terminus** terminal.
         "bracketed_paste_mode": true
     }
 
+}
+```
+There also needs to be a file `Packages\SendCode\support\Julia - Source File.sublime-build` with the command to "build" a Julia file by running it in the REPL.
+```
+{
+    "target": "send_code_build",
+    "cmd": "include(\"${file_name}\");",
+    "selector": "source.julia"
 }
 ```
 
@@ -258,6 +280,10 @@ This also works for evaluating a line of code: place the cursor on a line and ty
 In a currently opened Julia source file,
 press `ctrl+b` (which is a key binding for the menu action **Tools/Build**).
 The current file will be evaluated in a Julia-running **Terminus** window with an `include()`.
+
+### Asking for help in the REPL
+
+There is a key binding to send code to the REPL to invoke the help mode on the selection using the `send_code` command (see the key bindings above). 
 
 ### Accessing documentation via Zeal
 
