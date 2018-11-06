@@ -28,6 +28,13 @@ Bring up the **Command Palette**, and type in a few letters of **Package Control
 
 Repeat the procedure of package installation from **Package Control** to install the terminal emulation package **Terminus** (https://github.com/randy3k/Terminus), and the package to enable communication between a source window and the terminal, **SendCode** (https://github.com/randy3k/SendCode).
 
+### Install the Zeal package (off-line access the documentation)
+
+**Package Control** can also be used to install **Zeal for Sublime Text 2/3**.
+Furthermore the executable of Zeal is required, and can be found at
+[https://zealdocs.org/download.html](https://zealdocs.org/download.html).
+Finally, the dock set for Julia needs to be downloaded.
+
 ## Customization
 
 The key bindings file and the other customization files for the user live in the folder for user settings. In my case that is `C:\Users\PetrKrysl\AppData\Roaming\Sublime Text 3\Packages\User`. For brevity I will call this folder `USER`.
@@ -208,6 +215,27 @@ ${0:Compute}
 ```
 The snippets go into one file per snippet, which I put in `USER\snippets`.
 
+### Customization of Zeal
+
+The Zeal executable needs to be revealed to the editor. Also, Zeal
+needs to be made aware of the language of the documentation request:
+```
+{
+  /**
+   Zeal executable path. The instructions below require zeal
+   to be located very precisely by its full path!?
+   */
+  "zeal_command": "C:\\Program Files\\Zeal\\zeal.exe",
+  "mapping_sort" : true,
+
+  // Language mapping.
+  "language_mapping": {
+    "Python": {"lang": "python", "zeal_lang": "python"},
+    "Julia": {"lang": "julia", "zeal_lang": "julia"}
+  }
+}
+```
+
 ## Usage
 
 ### Open terminal
@@ -230,3 +258,8 @@ This also works for evaluating a line of code: place the cursor on a line and ty
 In a currently opened Julia source file,
 press `ctrl+b` (which is a key binding for the menu action **Tools/Build**).
 The current file will be evaluated in a Julia-running **Terminus** window with an `include()`.
+
+### Accessing documentation via Zeal
+
+Zeal can be brought up by commands specified through the **Command Palette**.
+Unfortunately I haven't found a way of making the Zeal window appear within the editor. On the flipside, searching the documentation is lightning fast with Zeal.
