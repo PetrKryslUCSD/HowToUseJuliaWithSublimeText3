@@ -271,8 +271,8 @@ Julia may be started in the resulting terminal in the usual way. The terminals t
 
 Open a Julia source file, and in the **Command Palette**, start typing in `Terminus`. Select **Terminus: Open Julia**. This will open the default terminal on the user's platform (`cmd` on Windows), and run Julia in the directory that contains the open file.
 
-### Evaluating code
 
+### Evaluating code
 Select some Julia code and press `ctrl+enter`. The code will be pasted into the **Terminus** window and evaluated in Julia (assuming Julia was started in that **Terminus** window).
 This also works for evaluating a line of code: place the cursor on a line and type `ctrl+enter`.
 
@@ -290,3 +290,15 @@ There is a key binding to send code to the REPL to invoke the help mode on the s
 
 Zeal can be brought up by commands specified through the **Command Palette**.
 Unfortunately I haven't found a way of making the Zeal window appear within the editor. On the flipside, searching the documentation is lightning fast with Zeal.
+
+## Additional useful packages
+
+### Wrap Plus Package
+
+Excellent for wrapping comments or markdown text [[link]](https://github.com/ehuss/Sublime-Wrap-Plus). It is capable of wrapping selections, which prevents annoyances such as wrapping comment text in a doc string that sucks in the code of the function being documented.
+
+### Markdown Editing Package
+
+Markdown plugin for Sublime Text. Provides a color scheme with robust syntax highlighting and useful editing features. 
+
+
