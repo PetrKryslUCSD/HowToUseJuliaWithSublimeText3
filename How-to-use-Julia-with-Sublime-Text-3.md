@@ -40,6 +40,26 @@ Finally, the docset for Julia needs to be downloaded within the Zeal documentati
 
 The key bindings file and the other customization files for the user live in the folder for user settings. In my case that is `C:\Users\PetrKrysl\AppData\Roaming\Sublime Text 3\Packages\User`. For brevity I will call this folder `USER`.
 
+### Basic user settings
+
+Select **Preferences/Settings**. In the "User" settings file (probably opens on the right in your editor) put the following lines:
+```
+{
+    "preview_on_click": false, // Don't preview file when you click on it in the sidebar
+    "auto_complete_commit_on_tab": false,
+    "draw_minimap_border": true,
+    "font_face": "Fira Code",
+    "font_size": 8,
+    "highlight_line": true,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "theme": "Adaptive.sublime-theme",
+    "translate_tab_to_spaces": true
+}
+```
+
 ### Key bindings
 
 Select **Preferences/Key bindings**. This will open a new window with 
