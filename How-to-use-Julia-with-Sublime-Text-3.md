@@ -45,17 +45,21 @@ The key bindings file and the other customization files for the user live in the
 Select **Preferences/Settings**. In the "User" settings file (probably opens on the right in your editor) put the following lines:
 ```
 {
+    "auto_complete_commit_on_tab": false,
+    "bracket_contents_foreground": "foreground",
+    "brackets_options": "foreground",
+    "detect_indentation": false,
     "preview_on_click": false, // Don't preview file when you click on it in the sidebar
     "auto_complete_commit_on_tab": false,
     "draw_minimap_border": true,
     "font_face": "Fira Code",
-    "font_size": 8,
+    "font_size": 9,
+    "margin": 1,
     "highlight_line": true,
-    "ignored_packages":
-    [
-        "Vintage"
-    ],
-    "theme": "Adaptive.sublime-theme",
+    "ignored_packages": ["Vintage"]
+    "theme": "Arzy.sublime-theme",
+    "translate_tab_to_spaces": true,
+    "always_show_minimap_viewport": true,
     "translate_tab_to_spaces": true
 }
 ```
@@ -321,4 +325,27 @@ Excellent for wrapping comments or markdown text [[link]](https://github.com/ehu
 
 Markdown plugin for Sublime Text. Provides a color scheme with robust syntax highlighting and useful editing features. 
 
+## Additional configurations
 
+### Using projects to control the color scheme
+
+I like to use projects to control the color scheme of the windows in which the projects are open. I put `"settings"` into the project file
+```
+{
+    "folders":
+    [
+        {
+            "path": "."
+        }
+    ], 
+    "settings": {
+         // "theme": "Asphalt.sublime-theme",
+         // "color_scheme": "Monokai.sublime-color-scheme",
+         "color_scheme": "Packages/Color Scheme - Dusk/Dusk.tmTheme",
+         // "color_scheme": "Packages/Color Scheme - JustBeforeDawn/JustBeforeDawn.tmTheme",
+         // "color_scheme": "Packages/Theme - Asphalt/Asphalt.tmTheme",
+         // "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
+    }
+}
+```
+where several of my favorite schemes are shown.
