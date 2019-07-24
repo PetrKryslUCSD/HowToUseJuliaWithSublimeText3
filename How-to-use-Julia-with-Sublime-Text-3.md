@@ -293,7 +293,7 @@ Julia may be started in the resulting terminal in the usual way. The terminals t
 
 ### Open a source file and then run Julia from the source file
 
-Open a Julia source file, and in the **Command Palette**, start typing in `Terminus`. Select **Terminus: Open Julia**. This will open the default terminal on the user's platform (`cmd` on Windows), and run Julia in the directory that contains the open file.
+Open a Julia source file, and in the **Command Palette**, start typing in `Terminus`. Select **Terminus: Open Julia**. This will open the default terminal on the user's platform (`cmd` on Windows, but see also the note about the Git bash below), and run Julia in the directory that contains the open file.
 
 
 ### Evaluating code
