@@ -261,6 +261,7 @@ ${0:Compute}
 </snippet>
 ```
 The snippets go into one file per snippet, which I put in `USER\snippets`.
+The current selection of snippets is part of this repository in the `snippets` folder.
 
 ### Customization of Zeal
 
