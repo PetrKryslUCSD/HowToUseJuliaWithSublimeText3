@@ -2,7 +2,7 @@
 
 ## Rationale
 
-This document was really written as a personal aide-memoire, which means it will be mostly limited to the ways in which I myself use the editor. Hence the discussion is limited to the programming of Julia and writing of markdown files. I do hope that other people may find it useful too, however. 
+This document was written as a personal aide-memoire, which means it will be mostly limited to the ways in which I myself use the editor. Hence the discussion is limited to the programming of Julia and writing of markdown files. I do hope that other people may find it useful too, however. 
 
 ## Installation 
 
@@ -349,3 +349,14 @@ I like to use projects to control the color scheme of the windows in which the p
 }
 ```
 where several of my favorite schemes are shown.
+
+## How to actually run Sublime Text
+
+I really can't stand the default "shell" (CMD) in which Julia starts on Windows. It is badly broken: most of the Windows commands and all of the UNIX commands don't work. What I prefer instead is [Git Bash](https://git-scm.com/downloads). One can get that to run Julia by starting Sublime Text  from a bat file. I create such a file with the line
+```
+cmd /C start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec \"C:\Users\PetrKrysl\Documents\Productivity\PortableSublimeText\sublime_text.exe\""
+```
+where my portable Sublime Text executable is invoked from within the Git shell.
+
+In order to get an executable file with the Sublime Text icon, I create a shortcut (for instance to be placed on their desktop), and I give it the icon (which is part of this repository).
+
