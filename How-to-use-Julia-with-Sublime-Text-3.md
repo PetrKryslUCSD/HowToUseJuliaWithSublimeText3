@@ -2,9 +2,9 @@
 
 ## Rationale
 
-This document was written as a personal aide-memoire, which means it will be mostly limited to the ways in which I myself use the editor. Hence the discussion is limited to the programming of Julia and writing of markdown files. I do hope that other people may find it useful too, however. 
+This document was written as a personal aide-memoire, which means it will be mostly limited to the ways in which I myself use the editor. Hence the discussion is limited to the programming of Julia and writing of markdown files. I do hope that other people may find it useful too, however.
 
-## Installation 
+## Installation
 
 ### Sublime Text 3
 
@@ -66,16 +66,16 @@ Select **Preferences/Settings**. In the "User" settings file (probably opens on 
 
 ### Key bindings
 
-Select **Preferences/Key bindings**. This will open a new window with 
+Select **Preferences/Key bindings**. This will open a new window with
 the file`Default (Windows).sublime-keymap`, shown in the window on the right.
 I put in there my personal preferences for key bindings:
 ```
 [
     // I find it useful to have pasted code immediately re-indented.
     { "keys": ["ctrl+v"], "command": "paste_and_indent" },
-    { "keys": ["ctrl+shift+v"], "command": "paste" }, 
-    // This key binding gives me access to code evaluation. A current line, 
-    // or a selection is passed to the terminal for evaluation 
+    { "keys": ["ctrl+shift+v"], "command": "paste" },
+    // This key binding gives me access to code evaluation. A current line,
+    // or a selection is passed to the terminal for evaluation
     // (the command belongs to the SendCode package).
     {
         "keys": ["ctrl+enter"], "command": "send_code",
@@ -88,7 +88,7 @@ I put in there my personal preferences for key bindings:
     // These two key bindings are used to give me access to the name of the current file and its full path.
     { "keys": ["ctrl+shift+x", "ctrl+alt+c"], "command": "filename_to_clipboard" },
     { "keys": ["ctrl+shift+x", "ctrl+alt+shift+c"], "command": "path_to_clipboard" },
-    // To make the copy and paste keys work in the Terminus window 
+    // To make the copy and paste keys work in the Terminus window
     // (otherwise they are ctrl+shift+c, ctrl+shift+v)
     { "keys": ["ctrl+c"], "command": "terminus_copy",
         "context": [
@@ -195,7 +195,7 @@ I make sure Julia code is sent to a **Terminus** terminal.
 
 ```
 {
-    "prog": "terminus", 
+    "prog": "terminus",
 
     "julia" : {
         "prog": "terminus",
@@ -215,10 +215,10 @@ There also needs to be a file `Packages\SendCode\support\Julia - Source File.sub
 
 ### Command to start Julia REPL
 
-In order to be able to open a Julia REPL from a Julia source file currently opened in the editor, I define the following command binding in the file `USER\Default.sublime-commands`: 
+In order to be able to open a Julia REPL from a Julia source file currently opened in the editor, I define the following command binding in the file `USER\Default.sublime-commands`:
 ```
 [
-	// Command to open a Julia REPL from a currently-opened Julia source file. 
+	// Command to open a Julia REPL from a currently-opened Julia source file.
 	// This command assumes that the Julia executable is in the path.
 	// 	Courtesy of Paul Soderlind.
     {
@@ -245,7 +245,7 @@ Alternatively, spell out the full path to the executable. I suppose having multi
 
 ### Snippets
 
-The **Julia** mode package comes with predefined snippets (check out the [github site](https://github.com/JuliaEditorSupport/Julia-sublime)). I have defined some of my own, such as this one 
+The **Julia** mode package comes with predefined snippets (check out the [github site](https://github.com/JuliaEditorSupport/Julia-sublime)). I have defined some of my own, such as this one
 to speed up the specification of a doc string (file `docstring.sublime-snippet`):
 ```
 <snippet>
@@ -309,7 +309,7 @@ The current file will be evaluated in a Julia-running **Terminus** window with a
 
 ### Asking for help in the REPL
 
-There is a key binding to send code to the REPL to invoke the help mode on the selection using the `send_code` command (see the key bindings above). 
+There is a key binding to send code to the REPL to invoke the help mode on the selection using the `send_code` command (see the key bindings above).
 
 ### Accessing documentation via Zeal
 
@@ -324,7 +324,11 @@ Excellent for wrapping comments or markdown text [[link]](https://github.com/ehu
 
 ### Markdown Editing Package
 
-Markdown plugin for Sublime Text. Provides a color scheme with robust syntax highlighting and useful editing features. 
+Markdown plugin for Sublime Text. Provides a color scheme with robust syntax highlighting and useful editing features.
+
+### TabNine  auto completer
+
+Install `TabNine`. This is a fantastic auto-completer, based upon deep learning it can suggest things that other auto-completers cannot possibly match.
 
 ## Additional configurations
 
@@ -338,7 +342,7 @@ I like to use projects to control the color scheme of the windows in which the p
         {
             "path": "."
         }
-    ], 
+    ],
     "settings": {
          // "theme": "Asphalt.sublime-theme",
          // "color_scheme": "Monokai.sublime-color-scheme",
@@ -360,4 +364,3 @@ cmd /C start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec \"C:\User
 where my portable Sublime Text executable is invoked from within the Git shell.
 
 In order to get an executable file with the Sublime Text icon, I create a shortcut (for instance to be placed on their desktop), and I give it the icon (which is part of this repository).
-
