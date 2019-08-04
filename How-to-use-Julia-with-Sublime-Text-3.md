@@ -328,7 +328,10 @@ Markdown plugin for Sublime Text. Provides a color scheme with robust syntax hig
 
 ### TabNine  auto completer
 
-Install `TabNine`. This is a fantastic auto-completer, based upon deep learning it can suggest things that other auto-completers cannot possibly match.
+Install `TabNine`. This is a fantastic auto-completer, based upon deep learning it can suggest things that other auto-completers cannot possibly match. Do not forget to turn of the default  auto-completion
+```
+"auto_complete": false,
+```
 
 ## Additional configurations
 
