@@ -10,7 +10,7 @@ This document was written as a personal aide-memoire, which means it will be mos
 
 Download the editor from the website [https://www.sublimetext.com/](https://www.sublimetext.com/). (Isn't it nice that the download is only 8.8 MB?)
 As I am on Windows 10, I will describe the installation and use of the editor on that platform. I do have the Windows Subsystem for Linux installed
-and I use it regularly, so I will describe use of Julia with Linux from within the editor running on Windows.
+and I use it regularly, so I will describe use of Julia running in an Ubuntu Linux from within the editor running on Windows.
 
 ### Install Package Control
 
@@ -298,6 +298,7 @@ Open a Julia source file, and in the **Command Palette**, start typing in `Termi
 
 
 ### Evaluating code
+
 Select some Julia code and press `ctrl+enter`. The code will be pasted into the **Terminus** window and evaluated in Julia (assuming Julia was started in that **Terminus** window).
 This also works for evaluating a line of code: place the cursor on a line and type `ctrl+enter`.
 
@@ -328,10 +329,11 @@ Markdown plugin for Sublime Text. Provides a color scheme with robust syntax hig
 
 ### TabNine  auto completer
 
-Install `TabNine`. This is a fantastic auto-completer, based upon deep learning it can suggest things that other auto-completers cannot possibly match. Do not forget to turn of the default  auto-completion
+Install `TabNine`. This is a fantastic auto-completer, based upon deep learning it can suggest things that other auto-completers cannot possibly match. Do not forget to turn off the default  auto-completion
 ```
 "auto_complete": false,
 ```
+Otherwise `TabNine`'s auto-completion will not be in effect.
 
 ## Additional configurations
 
@@ -367,3 +369,7 @@ cmd /C start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec \"C:\User
 where my portable Sublime Text executable is invoked from within the Git shell.
 
 In order to get an executable file with the Sublime Text icon, I create a shortcut (for instance to be placed on their desktop), and I give it the icon (which is part of this repository).
+
+# How to make this sustainable
+
+If the above looks like a lot of work, maybe it is. I do find it worthwhile, though. Nevertheless, if one had to do this over and over again, I can see how this could be found an onerous task. Fortunately, this can be fixed with the portable version of Sublime Text: download and expand  the portable version  and tweak it according to the instructions above. That's it: even when using a new computer or a new version of Sublime Text, this configuration persists. There is no need to do this more than once.
