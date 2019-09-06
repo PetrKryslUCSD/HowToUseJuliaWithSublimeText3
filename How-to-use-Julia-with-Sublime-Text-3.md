@@ -368,7 +368,7 @@ cmd /C start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec \"C:\User
 ```
 where my portable Sublime Text executable is invoked from within the Git shell.
 
-In order to get an executable file with the Sublime Text icon, I create a shortcut (for instance to be placed on their desktop), and I give it the icon (which is part of this repository).
+In order to get an executable file with the Sublime Text icon, I create a shortcut (for instance to be placed on the desktop), and I give it the icon which is part of this repository.
 
 # How to make this sustainable
 
