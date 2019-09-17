@@ -50,19 +50,18 @@ Select **Preferences/Settings**. In the "User" settings file (probably opens on 
     "brackets_options": "foreground",
     "detect_indentation": false,
     "preview_on_click": false, // Don't preview file when you click on it in the sidebar
-    "auto_complete_commit_on_tab": false,
     "draw_minimap_border": true,
     "font_face": "Fira Code",
     "font_size": 9,
     "margin": 1,
     "highlight_line": true,
     "ignored_packages": ["Vintage"],
-    "theme": "Arzy.sublime-theme",
     "translate_tab_to_spaces": true,
     "always_show_minimap_viewport": true,
     "translate_tab_to_spaces": true
 }
 ```
+I like the following sublime theme: **Arzy.sublime-theme**. If you do too, install this theme, and then add the following line to the above settings `"theme": "Arzy.sublime-theme",`.
 
 ### Key bindings
 
