@@ -56,7 +56,7 @@ Select **Preferences/Settings**. In the "User" settings file (probably opens on 
     "font_size": 9,
     "margin": 1,
     "highlight_line": true,
-    "ignored_packages": ["Vintage"]
+    "ignored_packages": ["Vintage"],
     "theme": "Arzy.sublime-theme",
     "translate_tab_to_spaces": true,
     "always_show_minimap_viewport": true,
