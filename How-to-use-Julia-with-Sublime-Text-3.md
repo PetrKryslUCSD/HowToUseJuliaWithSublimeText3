@@ -221,6 +221,23 @@ In order to be able to open a Julia REPL from a Julia source file currently open
 	// This command assumes that the Julia executable is in the path.
 	// 	Courtesy of Paul Soderlind.
     {
+        "caption": "Terminus: Open Julia 1.2",
+        "command": "terminus_open",
+        "args"   : {
+            "cmd": ["C:/Users/PK/AppData/Local/Julia-1.2.0/bin/julia.exe"],
+            "cwd": "${file_path:${folder}}",
+            "title": "Julia 1.2 REPL",
+            "pre_window_hooks": [
+                ["set_layout", {
+                   "cols": [0.0, 0.6, 1.0],
+                   "rows": [0.0, 1.0],
+                   "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+                }],
+                ["focus_group", {"group": 1}]
+            ]        
+        }
+    },
+    {
         "caption": "Terminus: Open Julia",
         "command": "terminus_open",
         "args"   : {
@@ -239,8 +256,8 @@ In order to be able to open a Julia REPL from a Julia source file currently open
     }
 ]
 ```
-Note that the above assumes that the Julia executable, `julia`, is somewhere in the path.
-Alternatively, spell out the full path to the executable. I suppose having multiple such commands for different versions of Julia would also make sense.
+Note that the above assumes that the Julia executable, `julia`, is somewhere in the path. That is the default program to start.
+In the first form, we spell out the full path to the executable. In this way we can have multiple  commands for different versions of Julia. So either choose the command *Terminus: Open Julia 1.2* or the command *Terminus: Open Julia*.
 
 ### Snippets
 
