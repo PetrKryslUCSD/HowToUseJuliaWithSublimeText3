@@ -214,17 +214,16 @@ There also needs to be a file `Packages\SendCode\support\Julia - Source File.sub
 
 ### Command to start Julia REPL
 
+The following functionality is the brainchild of Paul Soderlind (thanks!).
+
 In order to be able to open a Julia REPL from a Julia source file currently opened in the editor, I define the following command binding in the file `USER\Default.sublime-commands`:
 ```
 [
-	// Command to open a Julia REPL from a currently-opened Julia source file.
-	// This command assumes that the Julia executable is in the path.
-	// 	Courtesy of Paul Soderlind.
     {
         "caption": "Terminus: Open Julia 1.2",
         "command": "terminus_open",
         "args"   : {
-            "cmd": ["C:/Users/PK/AppData/Local/Julia-1.2.0/bin/julia.exe"],
+            "cmd": ["C:/Users/PetrKrysl/AppData/Local/Julia-1.2.0/bin/julia.exe"],
             "cwd": "${file_path:${folder}}",
             "title": "Julia 1.2 REPL",
             "pre_window_hooks": [
@@ -234,7 +233,8 @@ In order to be able to open a Julia REPL from a Julia source file currently open
                    "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
                 }],
                 ["focus_group", {"group": 1}]
-            ]        
+            ],
+            "env": {"JULIA_NUM_THREADS":"2"},       
         }
     },
     {
@@ -251,13 +251,16 @@ In order to be able to open a Julia REPL from a Julia source file currently open
                    "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
                 }],
                 ["focus_group", {"group": 1}]
-            ]        
+            ],
+            "env": {"JULIA_NUM_THREADS":"2"},
         }
     }
 ]
 ```
 Note that the above assumes that the Julia executable, `julia`, is somewhere in the path. That is the default program to start.
 In the first form, we spell out the full path to the executable. In this way we can have multiple  commands for different versions of Julia. So either choose the command *Terminus: Open Julia 1.2* or the command *Terminus: Open Julia*.
+
+Also, it is possible to set the environment variable directing the use of threading, `JULIA_NUM_THREADS`. Extending this to other environment variables is likely to be successful as well.
 
 ### Snippets
 
