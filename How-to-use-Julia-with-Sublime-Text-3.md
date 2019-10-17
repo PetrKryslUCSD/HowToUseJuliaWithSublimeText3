@@ -258,7 +258,7 @@ In order to be able to open a Julia REPL from a Julia source file currently open
 ]
 ```
 Note that the above assumes that the Julia executable, `julia`, is somewhere in the path. That is the default program to start.
-In the first form, we spell out the full path to the executable. In this way we can have multiple  commands for different versions of Julia. So either choose the command *Terminus: Open Julia 1.2* or the command *Terminus: Open Julia*.
+In the first form, we spell out the full path to the executable. In this way we can have multiple  commands for different versions of Julia. So in the **Tools/Command Palette** either choose the command **Terminus: Open Julia 1.2** or the command **Terminus: Open Julia**.
 
 Also, it is possible to set the environment variable directing the use of threading, `JULIA_NUM_THREADS`. Extending this to other environment variables is likely to be successful as well.
 
