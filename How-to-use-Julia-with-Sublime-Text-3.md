@@ -57,8 +57,7 @@ Select **Preferences/Settings**. In the "User" settings file (probably opens on 
     "highlight_line": true,
     "ignored_packages": ["Vintage"],
     "translate_tab_to_spaces": true,
-    "always_show_minimap_viewport": true,
-    "translate_tab_to_spaces": true
+    "always_show_minimap_viewport": true
 }
 ```
 I like the following sublime theme: **Arzy.sublime-theme**. If you do too, install this theme, and then add the following line to the above settings `"theme": "Arzy.sublime-theme",`.
