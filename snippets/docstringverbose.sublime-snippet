@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+"""
+    ${1:$TM_SELECTED_TEXT}
+
+Compute the Bar index between `x` and `y`. If `y` is missing, compute
+the Bar index between all pairs of columns of `x`.
+
+# Arguments
+- 
+
+# Examples
+```julia
+julia> bar([1, 2], [1, 2])
+1
+```
+"""
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>docsstringverbose</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.julia</scope>
+</snippet>

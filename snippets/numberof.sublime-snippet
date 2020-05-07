@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+num${1:something}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>numberof</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.julia</scope>
+</snippet>

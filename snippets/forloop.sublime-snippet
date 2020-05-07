@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+for ${1:i} in ${2:1:length(${3:a})}
+	${0:${3:a}[${1:i}]}
+end
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>forloop</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.julia</scope>
+</snippet>

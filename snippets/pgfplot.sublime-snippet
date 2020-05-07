@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+using PGFPlotsX
+x = range(0; stop = 2*pi, length = 100)
+y = sin.(x)
+x = range(0; stop = 2*pi, length = 10)
+y = sin.(x)
+@pgf _a = Axis({
+              xlabel = "x",
+              ylabel = "y",
+              title = "Figure"
+          },
+          Plot(Table([:x => x, :y => y])))
+display(_a)
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>pgfplot</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.julia</scope>
+</snippet>

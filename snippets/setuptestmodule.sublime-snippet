@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+module ${1:modulename}
+using FinEtools
+using Test
+function test()
+	${0:body}
+end
+end
+using .${1:modulename}
+${1:modulename}.test()
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>setuptestmodule</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.julia</scope>
+</snippet>
