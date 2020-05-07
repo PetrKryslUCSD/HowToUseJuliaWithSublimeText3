@@ -124,7 +124,7 @@ I put in there my personal preferences for key bindings:
     // or a selection is passed to the terminal for evaluation
     // (the command belongs to the SendCode package).
     {
-        "keys": ["ctrl+enter"], "command": "send_code",
+        "keys": ["ctrl+keypad_enter"], "command": "send_code",
         "context": [
             { "key": "selector", "operator": "equal", "operand": "source" }
         ]
