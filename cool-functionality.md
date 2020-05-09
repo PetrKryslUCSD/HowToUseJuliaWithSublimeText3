@@ -2,6 +2,8 @@
 
 - Drag-and-drop of folders into ST.
 - Go any with # (ctrl+;)
+- Install SidebarEnhancements, FileIcons
+- Completions, indexing
 
 What to do when I run out of space: remove the history
 ```

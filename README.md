@@ -407,6 +407,9 @@ It is possible to jump directly to
 this file/line using this package, 
 with a key binding  (`Ctrl-Alt-U`, by default).
 
+### SideBarEnhancements
+
+Installs enhancements for the sidebar. 
 
 ### TabNine  auto completer
 
@@ -444,8 +447,8 @@ where several of my favorite schemes are shown.
 ## How to actually run Sublime Text
 
 I really can't stand the default "shell" (CMD) in which Julia starts on
-Windows. It is badly broken: most of the Windows commands and all of the UNIX
-commands don't work. What I prefer instead is [Git Bash]
+Windows. The interaction with the shell is quite unsatisfactory then: most of the Windows commands and all of the UNIX
+commands don't work as one would expect. What I prefer instead is [Git Bash]
 (https://git-scm.com/downloads). One can get that to run Julia by starting
 Sublime Text  from a bat file. I create such a file with the line ``` cmd /C
 start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec
