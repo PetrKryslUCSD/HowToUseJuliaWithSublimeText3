@@ -444,6 +444,10 @@ I like to use projects to control the color scheme of the windows in which the p
 ```
 where several of my favorite schemes are shown.
 
+### Fonts
+
+[`Envy Code R`](https://damieng.com/blog/2008/05/26/envy-code-r-preview-7-coding-font-released) is great. I also like `InputMonoCondensed` and `Fira Code`.
+
 ## How to actually run Sublime Text
 
 I really can't stand the default "shell" (CMD) in which Julia starts on
