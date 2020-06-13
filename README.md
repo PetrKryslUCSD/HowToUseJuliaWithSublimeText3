@@ -46,8 +46,7 @@ If something doesn't work precisely as you wish, you can meddle with the configu
 ### Sublime Text 3
 
 In the following we describe how to set up the editor from scratch. Download
-the editor from the website [https://www.sublimetext.com/]
-(https://www.sublimetext.com/). (Isn't it nice that the download is only 8.8
+the editor from the website [https://www.sublimetext.com/](https://www.sublimetext.com/). (Isn't it nice that the download is only 8.8
 MB?) As I am on Windows 10, I will describe the installation and use of the
 editor on that platform. I do have the Windows Subsystem for Linux installed
 and I use it regularly, so I will describe use of Julia running in an Ubuntu
