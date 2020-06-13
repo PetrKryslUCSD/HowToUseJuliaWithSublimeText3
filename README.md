@@ -34,8 +34,7 @@ The executable to run is `subl.exe`. So I open Git bash, and run
 
 #### Linux 64-bit
 
-I have configured a [portable version of Sublime Text for Linux]
-(https://github.com/PetrKryslUCSD/HowToUseJuliaWithSublimeText3/blob/master/sublime_text_3_portable_x64.tar.gz)
+I have configured a [portable version of Sublime Text for Linux](https://github.com/PetrKryslUCSD/HowToUseJuliaWithSublimeText3/blob/master/sublime_text_3_portable_x64.tar.gz)
 using the instructions detailed below (with a handful of omissions, for
 instance Zeal and Tabnine). Simply download, `tar xzvf` in some good place,
 and run `sublime_text`. 
