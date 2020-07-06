@@ -446,6 +446,24 @@ where several of my favorite schemes are shown.
 
 [`Envy Code R`](https://damieng.com/blog/2008/05/26/envy-code-r-preview-7-coding-font-released) is great. I also like `InputMonoCondensed` and `Fira Code`.
 
+`JetBrains Mono` is a very well designed font, and code is pleasingly legible when rendered in this code.
+
+To get the entire editor to display everything in the selected font (well, except the menu bar at the top), edit the file `Default.sublime-theme`. I put this in mine:
+```
+{
+    // http://www.sublimetext.com/docs/3/themes.html
+    "variables": {
+        "font_face": "JetBrains Mono",//"Envy Code R",
+        "font_size_sm": 10,
+        "font_size": 12,
+        "font_size_lg": 14,
+    },
+    "rules": [
+    ],
+}
+```
+Nice: now the sidebar looks the same as the text displayed in the editor.
+
 ## How to actually run Sublime Text
 
 I really can't stand the default "shell" (CMD) in which Julia starts on
