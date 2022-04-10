@@ -395,7 +395,7 @@ Markdown plugin for Sublime Text called **MarkdownEditing**. Provides a color sc
 
 ### FileIcons package
 
-Provides very nice file icons in the sidebar, seeing the contents of a folder at a glance his hands much easier.
+Provides very nice file icons in the sidebar, seeing the contents of a folder at a glance is hence much easier.
 
 ### Open URL package
 
@@ -470,10 +470,10 @@ I really can't stand the default "shell" (CMD) in which Julia starts on
 Windows. The interaction with the shell is quite unsatisfactory then: most of the Windows commands and all of the UNIX
 commands don't work as one would expect. What I prefer instead is [Git Bash]
 (https://git-scm.com/downloads). One can get that to run Julia by starting
-Sublime Text  from a bat file. I create such a file with the line ``` cmd /C
-start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec
-\"C:\Users\PetrKrysl\Documents\Productivity\PortableSublimeText\sublime_text.exe\""
-``` where my portable Sublime Text executable is invoked from within the Git
+Sublime Text  from a bat file. I create such a file with the line 
+``` cmd /C start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec \"C:\Users\PetrKrysl\Documents\Productivity\PortableSublimeText\sublime_text.exe\""
+``` 
+where my portable Sublime Text executable is invoked from within the Git
 shell.
 
 In order to get an executable file with the Sublime Text icon, I create a
