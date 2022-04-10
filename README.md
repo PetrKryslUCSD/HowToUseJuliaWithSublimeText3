@@ -471,7 +471,8 @@ Windows. The interaction with the shell is quite unsatisfactory then: most of th
 commands don't work as one would expect. What I prefer instead is [Git Bash]
 (https://git-scm.com/downloads). One can get that to run Julia by starting
 Sublime Text  from a bat file. I create such a file with the line 
-``` cmd /C start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec \"C:\Users\PetrKrysl\Documents\Productivity\PortableSublimeText\sublime_text.exe\""
+``` 
+cmd /C start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec \"C:\Users\PetrKrysl\Documents\Productivity\PortableSublimeText\sublime_text.exe\""
 ``` 
 where my portable Sublime Text executable is invoked from within the Git
 shell.
